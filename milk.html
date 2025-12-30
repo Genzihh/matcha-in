@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All | Matcha-In</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="./1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+    <nav class="nav-links">
+        <a href="./shop.html">Shop</a>
+        <a href="./index.html">Home</a>
+    </nav>
+    
+    <div class="logo">
+        <a href="./index.html">
+            <img src="./images/logo.png" alt="Matcha-In Logo">
+        </a>
+    </div>
+
+    <div class="user-actions">
+        <a href="#" aria-label="Account">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <a href="javascript:void(0)" onclick="toggleCart()" aria-label="Cart" class="cart-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span id="cart-count-badge" class="cart-badge">0</span>
+        </a>
+    </div>
+</header>
+
+<main class="product-detail-section">
+    <div class="product-detail-gallery">
+        <div class="detail-image-container">
+            <img src="./images/matcha milk TA.webp" alt="matcha" class="detail-img img-1">
+            <img src="./images/matcha milk DI.webp" alt="matcha" class="detail-img img-2">
+        </div>
+    </div>
+
+    <div class="product-detail-content">
+        
+        <h1 class="detail-title">Matcha-In Milk</h1>
+        <p class="detail-price">IDR 32.000</p>
+        
+        <div class="detail-description">
+            <p>Keseimbangan sempurna antara kesegaran susu pilihan dan sentuhan Matcha premium yang lembut. Matcha-in Milk hadir dengan profil rasa yang lebih light dan clean, sangat cocok bagi kamu yang menginginkan kesegaran instan tanpa rasa yang terlalu berat. Minuman pendamping paling pas untuk menemani momen santaimu kapan saja.</p>
+        </div>
+
+        <div class="detail-actions">
+            <div class="quantity-selector">
+                <button type="button" onclick="changeQty(-1)">-</button>
+                <input type="number" id="qty" value="1" min="1" oninput="validateQty(this)">
+                <button type="button" onclick="changeQty(1)">+</button>
+            </div>
+            
+            <button class="btn-add-to-cart-full" onclick="addToCart('Matcha-in Cookies', 38000, './images/matcha cookies TA.webp', parseInt(document.getElementById('qty').value))">
+                TAMBAHKAN KE KERANJANG
+            </button>
+            
+            <button class="btn-buy-now-full">
+                BELI SEKARANG
+            </button>
+        </div>
+
+        <div class="delivery-actions">
+            <p class="delivery-label">Atau pesan melalui:</p>
+            <div class="delivery-buttons">
+                <a href="#" class="btn-delivery shopeefood">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="shopee" width="18"> ShopeeFood
+                </a>
+                <a href="#" class="btn-delivery grabfood">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Grab_Logo.svg" alt="grab" width="40"> GrabFood
+                </a>
+            </div>
+        </div>
+
+        <div class="detail-extra-info">
+            <p><strong>Notes:</strong> Fresh Milk, Subtle Umami, Light & Refreshing.</p>
+            <p><strong>Size:</strong> 250ml (Ready-to-Drink Bottle).</p>
+        </div>
+    </div>
+</main>
+
+<div class="scrolling-features">
+    <div class="marquee-track">
+        <span>KUALITAS PREMIUM UJI 🍵</span>
+        <span>100% ORGANIK 🌿</span>
+        <span>PENGIRIMAN CEPAT 🚀</span>
+        <span>TANPA GULA TAMBAHAN ✨</span>
+        <span>GEN-Z FAVORITE 💖</span>
+        <span>KUALITAS PREMIUM UJI 🍵</span>
+        <span>100% ORGANIK 🌿</span>
+        <span>PENGIRIMAN CEPAT 🚀</span>
+        <span>TANPA GULA TAMBAHAN ✨</span>
+        <span>GEN-Z FAVORITE 💖</span>
+    </div>
+</div>
+
+<section class="reviews-section">
+    <h2 class="section-title-center">Customer Reviews</h2>
+
+    <div class="reviews-summary">
+        <div class="summary-left">
+            <div class="big-rating">4.9</div>
+            <div class="stars">★★★★★</div>
+            <p>Berdasarkan 120 Ulasan</p>
+        </div>
+
+        <div class="summary-middle">
+            <div class="rating-bar-item">
+                <span>5 ★</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                <span>108</span>
+            </div>
+            <div class="rating-bar-item">
+                <span>4 ★</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 7%;"></div></div>
+                <span>10</span>
+            </div>
+            <div class="rating-bar-item">
+                <span>3 ★</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 2%;"></div></div>
+                <span>2</span>
+            </div>
+            <div class="rating-bar-item">
+                <span>2 ★</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 1%;"></div></div>
+                <span>0</span>
+            </div>
+            <div class="rating-bar-item">
+                <span>1 ★</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 0%;"></div></div>
+                <span>0</span>
+            </div>
+        </div>
+
+        <div class="summary-right">
+            <button class="btn-write-review">Tulis Ulasan</button>
+        </div>
+    </div>
+
+    <div class="reviews-list">
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-stars">★★★★★</span>
+                <span class="review-date">25 Des 2024</span>
+            </div>
+            <h4 class="reviewer-name">Sisca K. <span class="verified-badge">✓ Verified Buyer</span></h4>
+            <p class="review-text">"Suka banget sama Matcha-in Milk! Rasanya lebih enteng di lidah dan gak bikin eneg. Pas banget diminum siang-siang pas lagi panas. Matchanya tetep berasa tapi sopan banget di tenggorokan."</p>
+        </div>
+
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-stars">★★★★★</span>
+                <span class="review-date">22 Des 2024</span>
+            </div>
+            <h4 class="reviewer-name">Budi Santoso <span class="verified-badge">✓ Verified Buyer</span></h4>
+            <p class="review-text">"Pesan yang Milk karena pengen yang lebih seger, dan ternyata beneran enak. Anak-anak di rumah juga suka karena rasanya yang milky tapi tetep ada aroma khas matchanya. Recommended!"</p>
+        </div>
+    </div>
+</section>
+
+<div id="cart-overlay" class="overlay" onclick="toggleCart()"></div>
+
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Your cart</h2>
+        <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div class="cart-content"></div> 
+        
+    <div class="cart-footer-section">
+        <div class="subtotal-row">
+            <span>Subtotal</span>
+            <span class="subtotal-price">Rp0</span>
+        </div>
+        <p class="shipping-text">Shipping & taxes calculated at checkout</p>
+
+        <div class="cart-note-section">
+            <label for="cart-note">Add a note to your order</label>
+            <textarea id="cart-note" placeholder=""></textarea>
+        </div>
+
+        <div class="shipping-protection-row">
+            <input type="checkbox" id="protection-check" class="protection-checkbox">
+            <div class="protection-text">
+                <label for="protection-check" class="protection-title">Shipping Protection <strong>Rp2.000</strong></label>
+                <p>Your order will be covered against loss, damage, or theft.</p>
+            </div>
+            <div class="protection-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+        </div>
+
+        <button class="checkout-btn">Check Out</button>
+    </div>
+</div>
+
+
+
+
+
+<footer class="site-footer">
+        <div class="footer-main">
+            
+            <div class="footer-nav-wrapper">
+                <nav class="footer-nav-links">
+                    <a href="#">About us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Refunds</a>
+                </nav>
+            </div>
+
+            <div class="footer-contact-area">
+                <p class="made-with-love">made with love!</p>
+                <a href="mailto:hello@matchain.com" class="footer-email">hello@matchain.com</a>
+                
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="region-selector">
+                <select id="country">
+                    <option value="ID">Indonesia (IDR Rp)</option>
+                    <option value="US">United States (USD $)</option>
+                </select>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Matcha-In·</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+</body>
+</html>
